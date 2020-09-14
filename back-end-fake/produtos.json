@@ -1,0 +1,47 @@
+{
+    "produtos": [
+      {
+          "id": 1,
+          "nome": "Mouse Microsoft",
+          "valor": 15.90,
+          "promocao": false,
+          "valorPromo": 0,
+          "imagem": "mouse.jpg"
+      },
+      {
+        "id": 2,
+        "nome": "Teclado Microsoft",
+        "valor": 30.00,
+        "promocao": false,
+        "valorPromo": 0,
+        "imagem": "teclado.jpg"
+      },
+      {
+        "id": 3,
+        "nome": "Monitor Samsung",
+        "valor": 250.00,
+        "promocao": false,
+        "valorPromo": 0,
+        "imagem": "monitor.jpg"
+      },
+      {
+        "id": 4,
+        "nome": "Laptop Asus",
+        "valor": 3000.00,
+        "promocao": false,
+        "valorPromo": 0,
+        "imagem": "laptop.jpg"
+      },
+      {
+        "id": 5,
+        "nome": "Memoria Ram 8 giga",
+        "valor": 240.00,
+        "promocao": false,
+        "valorPromo": 0,
+        "imagem": "memoria.jpg"
+      }
+    ],
+    "posts": [
+        { "id": 1, "title": "json-server", "author": "typicode" }
+    ]    
+}

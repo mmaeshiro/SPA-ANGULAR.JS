@@ -11,6 +11,9 @@ import { FooterComponent } from './navegacao/footer/footer.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouteConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
+import { ProdutoService } from './produtos/produtos.service';
+import { ListarProdutoComponent } from './produtos/listar-produto/listar-produto.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
     HomeComponent,
     FooterComponent,
     ContatoComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    ListarProdutoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
     [RouterModule.forRoot(rootRouteConfig, { useHash: false })]
   ],
   providers: [
+    ProdutoService,
     { provide: APP_BASE_HREF, useValue: '/angular' } //prefixo de rota
   ],
   bootstrap: [AppComponent]
