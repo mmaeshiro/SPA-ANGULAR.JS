@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,LOCALE_ID } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -11,9 +11,12 @@ import { FooterComponent } from './navegacao/footer/footer.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouteConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
-import { ProdutoService } from './produtos/produtos.service';
-import { ListarProdutoComponent } from './produtos/listar-produto/listar-produto.component';
-
+import { ProdutoService } from './produtos-service/produtos.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ListaProdutoComponent } from './produto/lista-produto/lista-produto.component';
+import { registerLocaleData } from '@angular/common';
+// import localePt  from '@angular/common/locales/pt';
+// registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -23,15 +26,17 @@ import { ListarProdutoComponent } from './produtos/listar-produto/listar-produto
     FooterComponent,
     ContatoComponent,
     DataBindingComponent,
-    ListarProdutoComponent
+    ListaProdutoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     [RouterModule.forRoot(rootRouteConfig, { useHash: false })]
   ],
   providers: [
     ProdutoService,
+    {provide: LOCALE_ID, useValue: 'pt-BR'},
     { provide: APP_BASE_HREF, useValue: '/angular' } //prefixo de rota
   ],
   bootstrap: [AppComponent]

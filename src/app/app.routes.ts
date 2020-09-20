@@ -3,7 +3,7 @@ import { HomeComponent } from './navegacao/home/home.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
-import { ListarProdutoComponent } from './produtos/listar-produto/listar-produto.component';
+import { ListaProdutoComponent } from './produto/lista-produto/lista-produto.component';
 
 export const rootRouteConfig: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,5 +11,6 @@ export const rootRouteConfig: Routes = [
   { path: 'contato', component: ContatoComponent },
   { path: 'sobre', component: SobreComponent },
   { path: 'feature-data-binding', component: DataBindingComponent },
-  { path: 'produtos', component: ListarProdutoComponent }         
+  { path: 'produtos', component: ListaProdutoComponent },
+  { path: 'produto-detalhe/:id', component: ListaProdutoComponent }            
 ];
